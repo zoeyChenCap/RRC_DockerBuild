@@ -1,0 +1,24 @@
+Based on the knowledge and skills you have learned from the readings and videos resources, set up the dev environments using Docker Containers and submit a Docker File.
+You can use the following articles as reference: 
+
+    Dockerize your React app (https://dev.to/karanpratapsingh/dockerize-your-react-app-4j2e)
+    Dockerizing a React App (https://mherman.org/blog/dockerizing-a-react-app/)
+    Next.js website with Docker compose (https://dev.to/scaabel/containerizing-a-nextjs-application-for-development-204d)
+
+The main purpose of this assignment is to evaluate whether or not you have learned to set up the dev environments.
+
+You will be assessed on your achievement of the following course learning outcomes: 
+
+    1.Describe different types of testing approaches in web application development to mitigate risk
+    2.Name different types of software testing approaches and methodologies
+    3.Develop a testing and deployment plan to mitigate risk
+    4.Summarize the continuous integration and delivery (CI/CD) process for code delivery of web applications
+
+Detailed Instructions:
+
+    1.You will submit a dockerfile with a README.md file that will contain instructions on how to get the web application running on localhost:7775 (127.0.0.1:7775) 
+    2.DockerFille will have to satisfy the following requirements 
+        (1)You will create a development environment that displays a <h1> tag with the text “Codin 1” website using Create React App (https://create-react-app.dev/)
+        (2)You will create a container with the name “lastName_firstName_coding_assignment11”
+        (3)You will host the site files in a workdir called “lastName_firstName_site” 
+
