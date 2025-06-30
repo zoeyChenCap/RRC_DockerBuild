@@ -16,21 +16,21 @@ This project is a UI Component Library built with **React**, **TypeScript**, **S
 
 ## Project Structure
 
+```text
 component-library/
 ├── src/
-│ └── components/
-│ └── Button/
-│ ├── Button.tsx
-│ ├── Button.types.tsx
-│ ├── Button.test.tsx
-│ ├── Button.stories.tsx
-│ └── index.ts
-│ └── ...
+│   └── components/
+│       └── Button/
+│           ├── Button.tsx
+│           ├── Button.types.tsx
+│           ├── Button.test.tsx
+│           ├── Button.stories.tsx
+│           └── index.ts
+│       └── ...
 ├── Dockerfile
 ├── README.md
 └── ...
-
----
+```
 
 ## Getting Started Locally
 
