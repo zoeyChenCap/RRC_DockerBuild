@@ -57,6 +57,9 @@ git sparse-checkout set Assignment12
 git checkout main
 ```
 ### 2. Install dependencies
+Make sure you are in the right directory and then install the dependencies.
+The right directory should be like "C:\Users\Owner\RRC_DockerBuild\Assignment12\component-library"
+You should be in the "component-library" then execute the following instruction.
 ```bash
 npm install
 ```
@@ -84,4 +87,4 @@ docker build -t chen_zoey_coding_assignment12 .
 docker run -d -p 8083:8083 --name chen_zoey_coding_assignment12 chen_zoey_coding_assignment12
 ```
 This will serve the production build of Storybook at http://localhost:8083
-
+Now you can review my demo page for component library
