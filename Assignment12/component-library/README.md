@@ -2,7 +2,7 @@
 
 This project is a UI Component Library built with **React**, **TypeScript**, **Styled-Components**, and **Storybook**. It is created as part of Assignment 12 for the Web Systems Build and Testing course.
 
-## ✨ Project Features
+## Project Features
 
 - 12 reusable UI components (Button, Label, Text, Table, Dropdown, RadioButton, Img, HeroImage, Card, etc.)
 - Storybook integration with controls and responsive views
@@ -14,7 +14,7 @@ This project is a UI Component Library built with **React**, **TypeScript**, **S
 - Styled using `styled-components`
 - All components support `disabled` states with visual change and test coverage
 
-## 🏗️ Project Structure
+## Project Structure
 
 component-library/
 ├── src/
