@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { TableCellProps } from './TableCell.types';
 
-const StyledTableCell = styled.div<TableCellProps>` 
+const StyledTableCell = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['backgroundColor'].includes(prop)
+})<TableCellProps>` 
   padding: 1rem;
   background-color: ${props => props.disabled ? '#ccc' : props.backgroundColor || '#eee'};
   color: #333;

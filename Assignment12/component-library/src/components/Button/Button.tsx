@@ -5,7 +5,9 @@ import { ButtonProps } from './Button.types.js';
 // Type for styled component (excludes text prop since it's passed as children)
 type StyledButtonProps = Omit<ButtonProps, 'text'>;
 
-const StyledButton = styled.button<StyledButtonProps>`
+const StyledButton = styled.button.withConfig({
+  shouldForwardProp: (prop) => !['backgroundColor'].includes(prop)
+})<StyledButtonProps>`
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border: none;
@@ -47,7 +49,11 @@ const darkenColor = (hex: string, percent: number) => {
 
 const Button: React.FC<ButtonProps> = ({ text, onClick, disabled, backgroundColor }) => {
   return (
-    <StyledButton onClick={onClick} disabled={disabled} backgroundColor={backgroundColor}>
+    <StyledButton 
+      onClick={onClick} 
+      disabled={disabled} 
+      backgroundColor={backgroundColor}
+    >
       {text}
     </StyledButton>
   );

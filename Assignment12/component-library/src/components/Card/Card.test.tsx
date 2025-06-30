@@ -15,9 +15,16 @@ describe('Card Component', () => {
     expect(titleElement).toHaveTextContent('Test Title');
   });
 
+  test('renders content in paragraph element', () => {
+    render(<Card title="Test" content="Test content" />);
+    const contentElement = screen.getByText('Test content');
+    expect(contentElement).toBeInTheDocument();
+  });
+
   test('applies custom className when provided', () => {
-    render(<Card title="Test" content="Content" className="custom-class" />);
-    const cardElement = screen.getByText('Test').closest('div');
-    expect(cardElement).toHaveClass('custom-class');
+    const { container } = render(<Card title="Test" content="Content" className="custom-class" />);
+    // 检查容器的第一个div（CardContainer）是否有我们的className
+    const cardContainer = container.firstChild;
+    expect(cardContainer).toHaveClass('custom-class');
   });
 });

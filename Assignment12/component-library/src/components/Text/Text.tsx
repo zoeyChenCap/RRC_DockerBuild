@@ -18,7 +18,7 @@ const StyledInput = styled.input<TextProps>`
   }
 `;
 
-const Text: React.FC<TextProps> = ({ value, onChange, disabled, placeholder }) => {
+const Text: React.FC<TextProps> = ({ value, onChange, disabled, placeholder, readOnly }) => {
   return (
     <StyledInput
       type="text"
@@ -26,6 +26,7 @@ const Text: React.FC<TextProps> = ({ value, onChange, disabled, placeholder }) =
       onChange={onChange}
       disabled={disabled}
       placeholder={placeholder}
+      readOnly={readOnly}
     />
   );
 };
