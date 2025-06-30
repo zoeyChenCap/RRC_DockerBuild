@@ -59,6 +59,9 @@ git checkout main
 ### 2. Install dependencies
 Make sure you are in the right directory and then install the dependencies.
 The right directory should be like "C:\Users\Owner\RRC_DockerBuild\Assignment12\component-library"
+```bash
+cd Assignment12/component-library
+```
 You should be in the "component-library" then execute the following instruction.
 ```bash
 npm install
