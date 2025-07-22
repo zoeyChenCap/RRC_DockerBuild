@@ -11,22 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Run Prettier
-        run: npm run format -- --check
+        working-directory: Assignment13/Chen_Zoey_ui_garden_build_checks
 
       - name: Run ESLint
         run: npm run lint
+        working-directory: Assignment13/Chen_Zoey_ui_garden_build_checks
+
+      - name: Run Prettier
+        run: npm run format
+        working-directory: Assignment13/Chen_Zoey_ui_garden_build_checks
 
       - name: Run Tests
-        run: npm run test -- --watchAll=false
+        run: npm test -- --watchAll=false
+        working-directory: Assignment13/Chen_Zoey_ui_garden_build_checks
