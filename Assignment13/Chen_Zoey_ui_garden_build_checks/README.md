@@ -95,4 +95,4 @@ docker build -t chen_zoey_coding_assignment13 .
 ```bash
 docker run -d -p 8018:8018 --name chen_zoey_coding_assignment13 chen_zoey_coding_assignment13
 ```
-Then visit my demo page at: http://localhost:8018
+Now you can visit my demo page at: http://localhost:8018
