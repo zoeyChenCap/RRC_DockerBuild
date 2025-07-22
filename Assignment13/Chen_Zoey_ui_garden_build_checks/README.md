@@ -5,6 +5,7 @@ This project is an extension of Assignment 12. It adds code quality checks into 
 ---
 
 ## Project Structure
+```bash
 Chen_Zoey_ui_garden_build_checks/
 ├── .github/workflows/ci.yml # GitHub Actions CI pipeline
 ├── .husky/ # Husky pre-commit hook
@@ -16,6 +17,7 @@ Chen_Zoey_ui_garden_build_checks/
 ├── public/
 └── src/
 └── components/
+```
 
 
 ## Getting Started Locally
