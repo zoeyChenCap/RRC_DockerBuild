@@ -1,21 +1,26 @@
 // eslint.config.js
 import js from "@eslint/js";
-import tseslint from "typescript-eslint";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-config-prettier";
 
 export default [
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
-    plugins: {
-      "@typescript-eslint": tseslint.plugin,
-    },
     languageOptions: {
-      parser: tseslint.parser,
+      parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: process.cwd(),
+        sourceType: "module",
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
     },
     rules: {
-      // 自定义规则，例如关闭一些你不想用的
+      ...tsPlugin.configs.recommended.rules,
       "no-console": "warn",
       "no-unused-vars": "warn",
     },
