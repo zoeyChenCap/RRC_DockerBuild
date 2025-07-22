@@ -1,4 +1,3 @@
-// eslint.config.js
 import js from "@eslint/js";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
@@ -14,6 +13,20 @@ export default [
         project: "./tsconfig.json",
         tsconfigRootDir: process.cwd(),
         sourceType: "module",
+      },
+      globals: {
+        // 加入测试环境下常用全局变量
+        test: true,
+        expect: true,
+        describe: true,
+        it: true,
+        jest: true,
+        beforeEach: true,
+        afterEach: true,
+        document: true,
+        window: true,
+        alert: true,
+        console: true,
       },
     },
     plugins: {
