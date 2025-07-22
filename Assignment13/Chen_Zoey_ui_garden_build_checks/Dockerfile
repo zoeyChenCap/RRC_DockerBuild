@@ -13,6 +13,7 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 8083
+RUN npm install -g serve
+EXPOSE 8018
 
-CMD ["npx", "serve", "-s", "build", "-l", "8083"]
+CMD ["serve", "-s", "build", "-l", "8018"]
