@@ -1,2 +1,2 @@
-   #!/bin/sh
-   echo "husky pre-commit hook running!"
+#!/bin/sh
+echo "husky pre-commit hook running!"
