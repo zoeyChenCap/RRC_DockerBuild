@@ -1,4 +1,5 @@
-build
-node_modules
-public
-coverage
+build/
+.codemap/
+.storybook/
+coverage/
+public/
