@@ -4,24 +4,35 @@ This project is an extension of Assignment 12. It adds code quality checks into 
 
 ---
 
+## **Step 1: Add a Monorepo Note at the Top**
+
+At the very top of your README, add:
+
+```markdown
+> **Note:**  
+> This project is part of a monorepo (`RRC_DockerBuild`) that contains multiple assignments (Assignment11, Assignment12, Assignment13, etc.), each in its own subfolder.  
+> **Only the root directory contains the `.git` repository and Husky configuration.**  
+> All Git hooks (such as pre-commit checks) are managed from the root.  
+> Each assignment subfolder contains only its own business code and dependencies.
+```
+
+---
+
 ## Project Structure
 
 ```bash
 RRC_DockerBuild/
-├── .github/
-│   └── workflows/
-│       └── ci.yml         # GitHub Actions CI pipeline (全局CI配置)
+├── .git/                  # Git repository (root only)
+├── .husky/                # Husky hooks (root only)
+├── package.json           # (root, for Husky only, optional)
+├── Assignment11/
+├── Assignment12/
 └── Assignment13/
     └── Chen_Zoey_ui_garden_build_checks/
-        ├── .husky/                # Husky pre-commit hook
-        ├── .eslintrc / eslint.config.js # ESLint config
-        ├── .prettierrc            # Prettier config
-        ├── Dockerfile
-        ├── README.md
         ├── package.json
+        ├── src/
         ├── public/
-        └── src/
-            └── components/
+        └── ...
 ```
 
 ## Getting Started Locally
@@ -45,6 +56,12 @@ cd RRC_DockerBuild
 
 If you want to save space, you can delete or ignore the `Assignment11` and `Assignment12` folders after cloning.
 
+To install husky in the root folder, execute the following instruction.
+
+```bash
+npm install
+```
+
 ### 2. Install dependencies
 
 Make sure you are in the right directory and then install the dependencies.
@@ -52,19 +69,14 @@ The right directory should be like `.../RRC_DockerBuild/Assignment13/Chen_Zoey_u
 
 ```bash
 cd Assignment13/Chen_Zoey_ui_garden_build_checks
-```
-
-You should be in the `Chen_Zoey_ui_garden_build_checks` folder, then execute the following instruction.
-
-```bash
 npm install
 ```
 
-### 3. Install Husky
+> **Note:**  
+> You do **not** need to install Husky in this subproject.  
+> All Git hooks are managed from the root of the monorepo (`RRC_DockerBuild`).
 
-```bash
-npm run prepare
-```
+---
 
 ## Pre-commit Code Quality Checks
 
@@ -83,6 +95,7 @@ git commit -m "Your commit message"
 ```
 
 If any linting error, formatting issue, or test failure exists, the commit will be blocked until they are resolved.
+
 
 ## GitHub Actions CI/CD
 
