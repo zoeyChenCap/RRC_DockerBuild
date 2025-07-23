@@ -1,0 +1,4 @@
+# RRC_DockerBuild
+
+> **Note:**
+> This repository (RRC_DockerBuild) contains multiple assignment projects (such as Assignment11, Assignment12, Assignment13, etc.), each located in its own subfolder. These subfolders are **not** independent git repositories; the entire repository has a single `.git` directory and a single set of Git hooks (Husky) configured at the root. The root `package.json` is used only for managing development tools (like Husky). All business code dependencies and run scripts are located in the respective subproject folders (e.g., `Assignment13/Chen_Zoey_ui_garden_build_checks`). Please enter the relevant subproject folder for development and running the application. 

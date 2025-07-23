@@ -14,13 +14,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: '20.x'
 
       - name: Install dependencies
-        run: npm ci
+        run: HUSKY_SKIP_INSTALL=1 npm install
         working-directory: Assignment13/Chen_Zoey_ui_garden_build_checks
 
       - name: Run ESLint
