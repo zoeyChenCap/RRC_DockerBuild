@@ -35,7 +35,6 @@ function App() {
   };
 
   const handleSubmit = () => {
-    //console.log('Form submitted!'); // This will trigger ESLint warning
     alert(
       `Form submitted!\nUsername: ${username}\nEmail: ${email}\nCountry: ${selectedCountry}\nAgreed to Terms: ${agreedToTerms ? 'Yes' : 'No'}`
     );
