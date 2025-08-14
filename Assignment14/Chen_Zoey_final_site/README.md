@@ -4,6 +4,64 @@ This portfolio site showcases my course work and was built with React, TypeScrip
 
 ---
 
+## **Quick Start**
+
+### **Clone Repository (Assignment14 Only)**
+
+Since this project is part of a larger repository, you can clone only the Assignment14 directory using Git sparse checkout:
+
+```bash
+# 1. Clone the repository with sparse checkout
+git clone --filter=blob:none --sparse https://github.com/zoeyChenCap/RRC_DockerBuild.git
+cd RRC_DockerBuild
+
+# 2. Set sparse checkout to only download Assignment14
+git sparse-checkout set Assignment14
+
+# 3. Navigate to the project directory
+cd Assignment14/Chen_Zoey_final_site
+
+# 4. Build and run with Docker
+docker build -t chen_zoey_coding_assignment14 .
+docker run -d -p 5575:80 --name chen_zoey_coding_assignment14 chen_zoey_coding_assignment14
+```
+
+### **Alternative: Clone Entire Repository**
+
+If you prefer to clone the complete repository:
+
+```bash
+# Clone the complete repository
+git clone https://github.com/zoeyChenCap/RRC_DockerBuild.git
+cd RRC_DockerBuild/Assignment14/Chen_Zoey_final_site
+
+# Build and run
+docker build -t chen_zoey_coding_assignment14 .
+docker run -d -p 5575:80 --name chen_zoey_coding_assignment14 chen_zoey_coding_assignment14
+```
+
+### **Repository Structure**
+```
+RRC_DockerBuild/
+├── Assignment11/
+├── Assignment12/
+├── Assignment13/
+└── Assignment14/
+    └── Chen_Zoey_final_site/  ← This portfolio project
+        ├── src/
+        ├── public/
+        ├── Dockerfile
+        └── package.json
+```
+
+### **Prerequisites**
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- Docker Desktop
+- Git (for sparse checkout feature)
+
+---
+
 ## **Features**
 
 - **Responsive Design**: Mobile-first approach with responsive grid layouts
