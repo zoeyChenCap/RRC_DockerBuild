@@ -42,7 +42,7 @@ const CardBody = styled.div`
   padding: 0.5rem 1.5rem 1.5rem 1.5rem;
 `;
 
-const CardContent = styled.p`
+const CardContent = styled.div`
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
